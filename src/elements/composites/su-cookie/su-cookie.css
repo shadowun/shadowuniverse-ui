@@ -1,0 +1,30 @@
+su-cookie {
+    display: block;
+}
+
+.cookie-banner {
+    position: fixed;
+    top: var(--su-space-md);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - (var(--su-space-16) * 2));
+    max-width: 540px;
+    padding: var(--su-space-12) var(--su-space-16);
+    background: var(--su-bg-panel);
+    border: 1px solid var(--su-border-dark);
+    border-radius: var(--su-radius-md);
+    color: var(--su-text-muted);
+    font-family: var(--su-font-mono);
+    font-size: var(--su-text-sm);
+    line-height: var(--su-line-height-tight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--su-space-md);
+    box-shadow: var(--su-shadow-overlay);
+    z-index: var(--su-z-cookie);
+}
+
+.cookie-banner p {
+    margin: 0;
+}

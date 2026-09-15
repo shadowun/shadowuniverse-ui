@@ -1,0 +1,45 @@
+su-button {
+    display: inline-block;
+    background-color: var(--su-btn-bg, var(--su-btn-bg-primary));
+    color: var(--su-btn-color, var(--su-btn-color-primary));
+    font-family: var(--su-font-heading);
+    font-size: var(--su-btn-text-lg);
+    font-weight: var(--su-font-weight-bold);
+    letter-spacing: var(--su-tracking-wide);
+    text-transform: uppercase;
+    padding: var(--su-btn-padding-lg);
+    border-radius: var(--su-radius-sm);
+    cursor: pointer;
+    transition: var(--su-transition-smooth);
+}
+
+su-button:hover {
+    background-color: var(--su-btn-hover-bg, var(--su-btn-bg-hover));
+    color: var(--su-btn-hover-color, var(--su-btn-color-hover));
+}
+
+/* ELEMENTAL VARIANTS */
+
+/* Size: Small */
+su-button.sm {
+    font-size: var(--su-btn-text-sm);
+    padding: var(--su-btn-padding-sm);
+    font-family: var(--su-font-mono);
+}
+
+/* Style: Ghost / Outline */
+su-button.ghost {
+    background-color: var(--su-btn-bg-default);
+    color: var(--su-text-muted);
+}
+
+su-button.ghost:hover {
+    background-color: var(--su-color-transparent);
+    color: var(--su-text-white);
+}
+
+/* Style: Accept (Brand Highlight) */
+su-button.accept:hover {
+    background-color: var(--su-btn-bg-hover);
+    color: var(--su-btn-color-hover);
+}

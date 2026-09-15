@@ -1,0 +1,12 @@
+su-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--su-space-sm);
+  padding: var(--su-space-6) var(--su-space-12);
+  font-family: var(--su-font-mono);
+  font-size: var(--su-text-sm);
+  color: var(--su-text-muted);
+  background: var(--su-bg-panel);
+  border: 1px solid var(--su-border-dark);
+  border-radius: var(--su-radius-sm);
+}

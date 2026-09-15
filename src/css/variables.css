@@ -1,0 +1,126 @@
+:root {
+    /* Absolute Colors */
+    --su-color-black: #000000;
+    --su-color-white: #ffffff;
+    --su-color-transparent: transparent;
+
+    /* Surface & Panel Colors */
+    --su-bg-main: #000000;
+    --su-bg-panel: #111111;
+    --su-bg-footer: #0a0a0a;
+    --su-border-dark: #222222;
+    --su-border-hover: #444444;
+
+    --su-text-white: #ffffff;
+    --su-text-black: #000000;
+    --su-text-light: #f8f8f8;
+    --su-text-muted: #ccc;
+    --su-text-subtle: rgba(255, 255, 255, 0.4);
+    --su-text-error: #ff6b6b;
+    --su-text-success: #51cf66;
+
+    /* Ecosystem Brand Accents */
+    --su-brand-shadow: #53ad55;
+    --su-brand-wtf: #8f8fff;
+    --su-brand-la: #4f7cff;
+
+    /* Social Channels & Highlights */
+    --su-brand-vimeo: #17D5FF;
+    --su-brand-discord: #5865f2;
+    --su-brand-youtube: #ff0000;
+    --su-brand-instagram-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --su-accent-amber: #d48d21;
+    --su-accent-amber-hover: rgba(212, 140, 33, 0.54);
+    --su-menu-hover-bg: rgba(26, 26, 26, 0.54);
+
+    /* Typography Font Stacks */
+    --su-font-heading: 'Inter', sans-serif;
+    --su-font-main: 'Noto Sans', sans-serif;
+    --su-font-mono: ui-monospace, 'SFMono-Regular', 'Consolas', 'Courier New', monospace;
+
+    /* Typography Scale */
+    --su-text-xs: 0.6875rem;
+    --su-text-sm: 0.75rem;
+    --su-text-base: 0.875rem;
+    --su-text-md: 0.9375rem;
+
+    --su-font-weight-normal: 400;
+    --su-font-weight-bold: 800;
+
+    --su-line-height-tight: 1.4;
+    --su-line-height-base: 1.5;
+
+    /* Letter Spacing (Tracking) */
+    --su-tracking-tight: -0.05em;
+    --su-tracking-normal: 0;
+    --su-tracking-wide: 0.1em;
+
+    /* Elevation & Opacity */
+    --su-shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.85);
+    --su-opacity-hover: 0.77;
+
+    /* Z-Index Scale (Critical for Component Stacking) */
+    --su-z-cookie: 10000;
+    --su-z-modal: 9999;
+    --su-z-menu: 9000;
+    --su-z-tooltip: 8000;
+    --su-z-dropdown: 7000;
+
+    /* Spacing Scale */
+    --su-space-xs: 4px;
+    --su-space-sm: 8px;
+    --su-space-md: 16px;
+    --su-space-lg: 24px;
+    --su-space-xl: 32px;
+
+    /* Granular Spacing Scale (Replaces magic padding values) */
+    --su-space-2: 2px;
+    --su-space-4: 4px;
+    --su-space-5: 5px;
+    --su-space-6: 6px;
+    --su-space-8: 8px;
+    --su-space-10: 10px;
+    --su-space-12: 12px;
+    --su-space-15: 15px;
+    --su-space-16: 16px;
+    --su-space-20: 20px;
+
+    /* Icon & Avatar Sizing Scale */
+    --su-icon-sm: 22px;
+    --su-icon-md: 24px;
+    --su-icon-lg: 28px;
+    --su-icon-xl: 34px;
+    --su-icon-2xl: 42px;
+
+    /* Add global border stroke */
+    --su-border-thin: 1px solid var(--su-border-dark);
+
+    /* Semantic Button Sizes (Padding & Text) */
+    --su-btn-padding-sm: var(--su-space-6) var(--su-space-12);
+    --su-btn-padding-md: var(--su-space-12) var(--su-space-16);
+    --su-btn-padding-lg: var(--su-space-12) var(--su-space-20);
+
+    --su-btn-text-sm: var(--su-text-xs);
+    --su-btn-text-md: var(--su-text-md);
+    --su-btn-text-lg: var(--su-text-base);
+
+    /* Semantic Button States & Colors */
+    --su-btn-bg-default: var(--su-color-transparent);
+    --su-btn-bg-primary: var(--su-text-white);
+    --su-btn-bg-hover: var(--su-brand-shadow);
+
+    --su-btn-color-default: var(--su-text-muted);
+    --su-btn-color-primary: var(--su-bg-main);
+    --su-btn-color-hover: var(--su-color-black);
+
+    --su-btn-border: 1px solid var(--su-border-dark);
+
+    /* Form & UI Radii */
+    --su-radius-sm: 4px;
+    --su-radius-md: 6px;
+    --su-radius-round: 50%;
+
+    /* Transitions */
+    --su-transition-fast: all 0.2s ease;
+    --su-transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Universe UI - Sandbox</title>
+
+    <!-- Import the bundled CSS (with SVGs baked in) -->
+    <link rel="stylesheet" href="./dist/index.css">
+
+    <!-- Setup a basic dark background for testing -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        .sandbox-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sandbox-container">
+        <h2>Component Sandbox</h2>
+
+        <!-- Drop your components here to test them -->
+        <su-button>Test Button</su-button>
+
+        <!-- Add your su-menu here to debug that breakpoint! -->
+    </div>
+
+    <!-- Import and register the JS components -->
+    <script type="module">
+        import { registerAllComponents } from './dist/index.js';
+        registerAllComponents();
+    </script>
+    <su-menu active-tab="home" active-app="vimeo" notified-apps="instagram,discord"></su-menu>
+
+</body>
+
+</html>

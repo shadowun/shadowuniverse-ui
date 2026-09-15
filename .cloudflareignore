@@ -1,0 +1,9 @@
+.git/
+.github/
+node_modules/
+README.md
+LICENSE.md
+.clinerules
+tsconfig.json
+package.json
+package-lock.json

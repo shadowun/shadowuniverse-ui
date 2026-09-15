@@ -1,0 +1,238 @@
+su-menu {
+    display: block;
+    width: 100%;
+}
+
+/* --- Layout --- */
+.su-menu-bar {
+    background: var(--su-bg-main);
+    border-top: 1px solid var(--su-border-dark);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--su-z-menu);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+}
+
+.nav-group ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Base Links --- */
+.nav-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.is-active {
+    display: flex;
+    align-items: center;
+    color: var(--su-text-white, #ffffff);
+    /* Locks text to white on all states */
+    text-decoration: none;
+    padding: var(--su-space-16) var(--su-space-10);
+    transition: var(--su-transition-smooth);
+    border-top: 2px solid transparent;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--su-text-light);
+}
+
+/* Force the text label to inherit the white color safely */
+.nav-label {
+    margin-left: var(--su-space-5);
+    font-size: var(--su-text-md);
+    line-height: var(--su-text-sm);
+    color: inherit;
+}
+
+.su-nav-icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav-label {
+    margin-left: var(--su-space-5);
+    font-size: var(--su-text-md);
+    line-height: var(--su-text-sm);
+}
+
+/* --- Group 1: Pages (Left Side) --- */
+.pages .su-nav-icon {
+    width: var(--su-icon-lg);
+    height: var(--su-icon-lg);
+}
+
+.pages .home .nav-link:hover,
+.pages .home .nav-link.is-active {
+    border-top-color: var(--su-brand-shadow);
+}
+
+.pages .wtf .nav-link:hover,
+.pages .wtf .nav-link.is-active {
+    border-top-color: var(--su-brand-wtf);
+}
+
+.pages .la .nav-link:hover,
+.pages .la .nav-link.is-active {
+    border-top-color: var(--su-brand-la);
+}
+
+.pages .nav-link:hover {
+    background-color: var(--su-menu-hover-bg);
+}
+
+/* --- Group 2: Apps (Right Side) --- */
+.apps .nav-label {
+    display: none;
+}
+
+.apps ul {
+    padding: 0 var(--su-space-15);
+}
+
+.apps .su-nav-icon {
+    width: var(--su-icon-sm);
+    height: var(--su-icon-sm);
+}
+
+/* Global App Active State */
+.apps .nav-link.is-active {
+    border-top-color: var(--su-accent-amber);
+}
+
+/* Specific App Hover States (Overrides active border/bg cleanly) */
+.apps .vimeo .nav-link:hover {
+    background: var(--su-brand-vimeo);
+    border-top-color: var(--su-brand-vimeo);
+}
+
+.apps .instagram .nav-link:hover {
+    background: var(--su-brand-instagram-grad);
+    border-top-color: transparent;
+}
+
+.apps .discord .nav-link:hover {
+    background: var(--su-brand-discord);
+    border-top-color: var(--su-brand-discord);
+}
+
+.apps .youtube .nav-link:hover {
+    background-color: var(--su-brand-youtube);
+    border-top-color: var(--su-brand-youtube);
+}
+
+
+/* --- Notification Utility --- */
+.has-notification::after {
+    content: '';
+    position: absolute;
+    top: var(--su-space-10);
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--su-accent-amber);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--su-bg-main);
+}
+
+/* --- System Clock --- */
+.su-clock {
+    display: flex;
+    align-items: center;
+    margin-left: var(--su-space-10);
+    padding-left: var(--su-space-15);
+    padding-right: var(--su-space-15);
+    border-left: 1px solid var(--su-border-dark);
+    font-size: var(--su-text-sm);
+    color: var(--su-text-white, #ffffff);
+    white-space: nowrap;
+    /* Prevents time from wrapping on two lines */
+    user-select: none;
+}
+
+
+/* --- Breakpoints --- */
+@media screen and (max-width: 999px) {
+    .nav-label {
+        display: none;
+        /* Hide text */
+    }
+
+    /* Pages: Adjust padding and icon sizes */
+    .pages .nav-link {
+        padding: var(--su-space-15) var(--su-space-10);
+    }
+
+    .pages .home .su-nav-icon {
+        width: var(--su-icon-2xl);
+        height: var(--su-icon-2xl);
+    }
+
+    .pages .wtf .su-nav-icon,
+    .pages .la .su-nav-icon {
+        width: var(--su-icon-xl);
+        height: var(--su-icon-xl);
+    }
+
+    /* Apps: Morph into perfect circles */
+    .apps ul {
+        padding: 0 var(--su-space-10);
+    }
+
+    .apps .nav-link {
+        padding: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        justify-content: center;
+        border-top: none;
+        margin: 0 4px;
+    }
+
+    .apps .su-nav-icon {
+        width: var(--su-icon-md);
+        height: var(--su-icon-md);
+    }
+
+    /* Convert App Active State from top-border to ring */
+    .apps .nav-link.is-active {
+        box-shadow: 0 0 0 2px var(--su-accent-amber);
+    }
+
+    /* Adjust notification dot for circles */
+    .apps .has-notification::after {
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .su-menu-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .apps {
+        padding-bottom: var(--su-space-16);
+    }
+}

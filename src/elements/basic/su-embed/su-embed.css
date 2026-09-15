@@ -1,0 +1,34 @@
+su-embed {
+    display: block;
+    width: 100%;
+}
+
+.embed-container {
+    width: 100%;
+    /* No more padding hacks or absolute positioning! */
+}
+
+.embed-container.aspect-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.embed-container.aspect-21-9 {
+    aspect-ratio: 21 / 9;
+}
+
+.embed-container.aspect-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.embed-container.aspect-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.embed-container iframe,
+.embed-container embed,
+.embed-container object,
+.embed-container canvas {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

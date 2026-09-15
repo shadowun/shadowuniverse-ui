@@ -1,0 +1,7 @@
+# Prevents raw source & configuration files from leaking into static asset deployments
+.git/
+.github/
+node_modules/
+.clinerules
+tsconfig.json
+README.md

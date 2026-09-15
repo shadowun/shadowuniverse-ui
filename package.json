@@ -1,0 +1,29 @@
+{
+    "name": "@shadowuniverse/ui",
+    "version": "0.0.1",
+    "description": "Elemental design system, CSS architecture, and native Web Components for Shadow Universe.",
+    "type": "module",
+    "main": "dist/index.js",
+    "exports": {
+        ".": "./dist/index.js",
+        "./variables": "./src/css/variables.css",
+        "./css": "./dist/index.css"
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "build": "esbuild src/index.ts --bundle --format=esm --target=esnext --outfile=dist/index.js --loader:.svg=dataurl --minify",
+        "watch": "esbuild src/index.ts --bundle --format=esm --target=esnext --outfile=dist/index.js --loader:.svg=dataurl --watch",
+        "dev": "npx wrangler pages dev .",
+        "prepare": "npm run build"
+    },
+    "author": "Shadow Universe LLC",
+    "license": "UNLICENSED",
+    "private": true,
+    "devDependencies": {
+        "esbuild": "^0.28.2",
+        "typescript": "^7.0.2"
+    }
+}

@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--su-bg-main);
+    color: var(--su-text-white);
+    font-family: var(--su-font-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: var(--su-line-height-base);
+}
+
+h6 {
+    font-family: var(--su-font-heading);
+    color: var(--su-text-white);
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--su-transition-smooth);
+}
+
+a:hover {
+    color: var(--su-brand-shadow);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--su-brand-shadow);
+    outline-offset: 2px;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: var(--su-font-main);
+    font-size: var(--su-btn-text-md);
+    color: var(--su-text-white);
+    background-color: var(--su-bg-panel);
+    border: var(--su-btn-border);
+    border-radius: var(--su-radius-sm);
+    padding: var(--su-btn-padding-md);
+    transition: var(--su-transition-smooth);
+}

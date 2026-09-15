@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "declaration": true,
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "@shadowuniverse/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

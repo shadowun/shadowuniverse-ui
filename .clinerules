@@ -1,0 +1,31 @@
+# Shadow Universe UI - Development Rules
+
+You are working in `@shadowuniverse/ui`, a zero-dependency, unidirectional elemental design system. Adhere strictly to the following architectural laws. Do not deviate, do not introduce frameworks, and do not introduce shortcuts.
+
+## 1. Zero Dependency Mandate
+- NEVER introduce external libraries (e.g., React, Vue, Lodash, lit-html).
+- Use pure DOM APIs, ESNext TypeScript, and native Web Components (`extends HTMLElement`).
+
+## 2. Web Component Architecture
+- **No Import Side-Effects:** Never use self-executing `customElements.define()` calls at the bottom of files.
+- **Explicit Registration:** Every component must export its class AND a standalone registration function (e.g., `export function registerSuButton() { ... }`).
+- **Semantic HTML:** Use proper ARIA roles and semantic HTML tags. Do not use generic tags (like `<figure>`) for icons if a semantically hidden `<span>` is appropriate.
+
+## 3. Elemental CSS Rules (NO MAGIC NUMBERS)
+- **Variables Only:** Do not use hardcoded pixel values for padding, margin, font-size, line-height, radii, or colors in component stylesheets.
+- **Token Prefix:** All CSS Custom Properties must be prefixed with `--su-` and reside in `css/variables.css`.
+- **Composition over Inheritance:** Parent components (`/composites`) MUST NOT dictate the internal styles (like padding or fonts) of child components (`/basic`). Use elemental variants (e.g., `<su-button class="sm empty">`) instead of CSS overrides.
+
+## 4. Directory Structure Enforcement
+- `elements/basic/`: Single-responsibility, unopinionated basic elements (Buttons, Inputs, Clocks).
+- `elements/containers/`: Structural containers that orchestrate flow (Action Containers, Grids).
+- `elements/composites/`: Opinionated composites that wire basic/container elements together with business logic (Cookie Banners, Nav Menus).
+
+## 5. TypeScript Strictness
+- Define explicit return types for all functions and methods (e.g., `connectedCallback(): void`).
+- Do not use `any` unless mathematically impossible to type.
+- Declare all private class properties explicitly at the top of the class before assigning them in callbacks.
+
+## 6. Build System
+- The barrel file (`index.ts`) must export every class and registration function.
+- Do not modify `.gitignore` to include the `dist/` folder. The `dist/` directory is built via `esbuild` locally or during `npm prepare`.
